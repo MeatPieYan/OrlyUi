@@ -1,0 +1,216 @@
+@import 'mixin';
+
+$headerBackColor: #000000;
+$fontFamily: 'Dancing Script', cursive;
+$linkColor: #000;
+$hoverColor: #40C7FF;
+$indexBackgroundColor: #ffc0cb;
+$loadingBackgroudColor: #ffc0cb;
+$asideBackgroundColor: #ffc0cb;
+
+
+body {
+  font-family: $fontFamily;
+}
+
+header {
+  background-color: $headerBackColor;
+  height: 0rem;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.root {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  height: 40%;
+  text-align:center;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  overflow: visible;
+
+  div {
+    height: 100%;
+    position: relative;
+
+    img {
+      height: 90%;
+    }
+
+    .catalogContainer {
+      font-size: 3.5rem;
+      z-index: 99;
+      width: 60%;
+      min-width: 40%;
+      margin: 3rem auto;
+      text-align: center;
+      height: 4rem;
+      ul{
+
+        li{
+          display: inline-block;
+          margin-right: 3rem;
+          a{
+            color: $linkColor;
+            @include transition();
+            @include ts(0.01rem, 0.01rem);
+            &:link{
+              text-decoration: none;
+            }
+            &:visited{
+              text-decoration: none;
+            }
+            &:hover{
+              color: $hoverColor;
+              text-decoration:none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.index_pic {
+  background-color: $indexBackgroundColor;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  img {
+    min-width: 100%;
+    max-width: 100.5%;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    @include transition(all, 1s);
+  }
+}
+
+.show{
+  opacity: 1 !important;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top:0; bottom: 0; left: 0; right: 0;
+}
+
+.loadContainer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: $loadingBackgroudColor;
+  z-index: 98;
+  display: block;
+
+  .loading {
+    @extend .center;
+    width: 1em;
+    height: 5em;
+    background-color: #000;
+
+    animation: loadAnimation 1s infinite ease-in-out;
+    border-radius: 0.5em;
+    animation-delay: -0.16s;
+  }
+
+  .loading:after {
+    @extend .loading;
+    content: '';
+    left: 1.5em;
+    animation-delay: 0s;
+  }
+
+  .loading:before {
+    @extend .loading;
+    content: '';
+    left: -3em;
+    animation-delay: -0.32s;
+  }
+
+}
+
+.asideContainer {
+  background-color: $asideBackgroundColor;
+  width: 20vw;
+  overflow: hidden;
+  height: 100vh;
+  position: absolute;
+
+  .logoContainer {
+    width: 90%;
+    padding-left: 5%;
+    margin-top: 1.5rem;
+
+    img {
+      width: 100%;
+      overflow: visible;
+    }
+  }
+
+  .catalogContainer {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 3.5rem;
+    text-align: center;
+
+    ul {
+      margin-top: 20%;
+
+      li{
+        margin-bottom: 1rem;
+
+        a {
+          color: $linkColor;
+          @include transition();
+          @include ts(0.01rem, 0.01rem);
+          &:link{
+            text-decoration: none;
+          }
+          &:visited{
+            text-decoration: none;
+          }
+          &:hover{
+            color: $hoverColor;
+            text-decoration:none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.galleryContainer {
+  position: relative;
+  top: 0rem;
+  left: 20vw;
+  height: 100vh;
+}
+
+@keyframes loadAnimation {
+  0%,
+  80%,
+  100% {
+    height: 3em;
+  }
+  40% {
+    height: 5em;
+  }
+}

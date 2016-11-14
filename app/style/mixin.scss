@@ -1,0 +1,20 @@
+@mixin transition ($param:all, $time: 0.25s) {
+  -webkit-transition: $param $time ease-in-out;
+    transition: $param $time ease-in-out;
+}
+
+@mixin translate($x:0, $y:0) {
+  -moz-transform: translate($x,$y);
+   -ms-transform: translate($x,$y);
+   -o-transform: translate($x,$y);
+   -webkit-transform: translate($x,$y);
+   transform: translate($x,$y);
+}
+
+@mixin ts($s1:1px,$s2:1px,$color:#fff){
+    text-shadow:
+    $s1 $s1 $s2 $color,
+    -$s1 $s1 $s2 $color,
+    $s1 (-$s1) $s2 $color,
+    -$s1 (-$s1) $s2 $color;
+}
