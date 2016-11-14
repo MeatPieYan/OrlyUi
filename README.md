@@ -15,6 +15,7 @@ React Redux Redux-saga Webpack Babel Git
 - [x] Logo
 - [x] 慢滚动照片墙
 - [x] 菜单
+- [ ] 响应式布局
 
 #### 相册
 - [ ] 相册分类(年份, 精选)
