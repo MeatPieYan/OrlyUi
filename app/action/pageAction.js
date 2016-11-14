@@ -1,11 +1,12 @@
 import axios from 'axios';
+import config from '../config';
 
 const getCatagories = () => {
-  return axios.get('http://localhost:10630/getCatagoryList');
+  return axios.get('http://' + config.serverUrl + '/getCatagoryList');
 }
 
 const getLogo = () => {
-  return axios.get('http://localhost:10630/getLogo');
+  return axios.get('http://' + config.serverUrl + '/getLogo');
 }
 
 export default {
