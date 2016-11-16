@@ -3,11 +3,12 @@ export default function reducer(state={
 	remainPhoto: -1
 }, action) {
 	switch(action.type) {
-		case "FETCH_PHOTO": {
-			return {
-				...state
-			};
-		}
+		// case "FETCH_PHOTO": {
+		// 	return {
+		// 		...state
+		// 	};
+		// }
+		case "FETCHED_PHOTOS_BY_YEAR":
 		case "FETCHED_PHOTO": {
 			return {
 				...state,

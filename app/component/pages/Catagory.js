@@ -22,9 +22,7 @@ export default class Catagory extends React.Component {
 
   componentWillMount() {
     const { year } =this.props.params;
-    this.props.dispatch(actions.fetchLogo());
-    this.props.dispatch(actions.fetchCatagory());
-    this.props.dispatch(actions.fetchGallery(year));
+    this.props.dispatch(actions.loadCatagory(year));
   }
 
   render() {

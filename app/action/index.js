@@ -29,11 +29,26 @@ const renderPhoto = (data) => ({
 const fetchGallery = (year) => ({
   type: 'FETCH_GALLERY',
   payload: year
-})
+});
+
+const fetchedPhotoByYear = (photos) => ({
+  type: 'FETCHED_PHOTOS_BY_YEAR',
+  payload: photos
+});
 
 const loadIndex = () => ({
   type: 'LOAD_INDEX'
+});
+
+const loadCatagory = (year) => ({
+  type: 'LOAD_CATAGORY',
+  payload: year
 })
+
+const fetchedError = (err) => ({
+  type: 'FETCHED_ERROR',
+  payload: err.message
+});
 
 export default {
   fetchCatagory,
@@ -44,5 +59,9 @@ export default {
   fetchedPhoto,
   renderPhoto,
   fetchGallery,
-  loadIndex
+  loadIndex,
+  loadCatagory,
+  fetchedPhoto,
+  fetchedError,
+  fetchedPhotoByYear
 }
