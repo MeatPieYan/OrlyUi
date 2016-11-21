@@ -18,11 +18,13 @@ React Redux Redux-saga Webpack Babel Git
 - [ ] 响应式布局
 
 #### 相册
-- [ ] 相册分类(年份, 精选)
-- [ ] 照片展示
+- [x] 相册分类(年份, 精选)
+- [x] 照片展示
+- [ ] 单张展示
 
 #### AVA test
-- [ ] AVA/Mocha Unit test
+- [x] 集成AVA
+- [ ] AVA test case
 
 #### 控制台系统
 - [ ] 控制台系统
