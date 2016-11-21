@@ -33,9 +33,6 @@ export default class Home extends React.Component {
   }
 
   componentWillMount(){
-    // this.props.dispatch(actions.fetchCatagory());
-    // this.props.dispatch(actions.fetchLogo());
-    // this.props.dispatch(actions.fetchPhoto());
     this.props.dispatch(actions.loadIndex());
   }
 

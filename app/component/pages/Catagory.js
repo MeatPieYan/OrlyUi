@@ -26,13 +26,12 @@ export default class Catagory extends React.Component {
   }
 
   render() {
-    const { logo, catagory } = this.props;
+    const { logo, catagory, photo } = this.props;
 
     return (
       <div>
         <Aside logo={logo} catagory={catagory} />
-
-        <Gallery />
+        <Gallery photos={ photo }/>
       </div>
     );
   }
