@@ -60,8 +60,7 @@
     ]
   },
   "ava": {
-    "require": [
-      "./test/helper/setup-test-env.js"
-    ]
+    "require": ["babel-register", "babel-polyfill"],
+    "babel": "inherit"
   }
 }
