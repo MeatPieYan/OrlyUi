@@ -7,7 +7,7 @@
     "build": "webpack",
     "test": "ava \"test/**/*.test.js\" ",
     "watch:test": "npm t -- --watch",
-    "cover": "nyc npm run test",
+    "cover": "nyc npm t",
     "check-coverage": "nyc check-coverage --lines 95 --functions 95 --branches 95",
     "dev": "webpack-dev-server --devtool eval --progress --colors --inline --hot --content-base build --port 20630"
   },
@@ -60,7 +60,13 @@
       "lcov",
       "text",
       "html"
-    ]
+    ],
+    "include": ["app/**/*.js"],
+    "lines": 99,
+    "statements": 99,
+    "functions": 99,
+    "branches": 99,
+    "check-coverage": true
   },
   "ava": {
     "require": [
