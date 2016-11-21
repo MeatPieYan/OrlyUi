@@ -50,6 +50,7 @@
     "ava": "^0.17.0",
     "babel-polyfill": "^6.16.0",
     "babel-register": "^6.18.0",
+    "jsdom": "^9.8.3",
     "nyc": "^9.0.1"
   },
   "nyc": {
@@ -60,7 +61,9 @@
     ]
   },
   "ava": {
-    "require": ["babel-register", "babel-polyfill"],
+    "require": [
+      "./test/helper/setup-test-env.js"
+    ],
     "babel": "inherit"
   }
 }
