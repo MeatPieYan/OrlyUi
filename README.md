@@ -20,7 +20,10 @@ React Redux Redux-saga Webpack Babel Git
 #### 相册
 - [x] 相册分类(年份, 精选)
 - [x] 照片展示
+- [x] 瀑布流布局
+- [ ] 照片描述
 - [ ] 单张展示
+- [ ] 分类切换
 
 #### AVA test
 - [x] 集成AVA

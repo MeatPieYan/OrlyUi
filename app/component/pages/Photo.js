@@ -11,6 +11,7 @@ export default class Photo extends React.Component {
     return (
       <div class="galleryPhoto">
         <img src={photo.url} />
+        <p>{photo.desc || "Hello Orly"}</p>
       </div>
     );
   }

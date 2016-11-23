@@ -16,7 +16,11 @@ export default class Gallery extends React.Component {
 
     return (
       <div class="galleryContainer">
+        <div class="waterfall">
         { imgs }
+
+        </div>
+
       </div>
 
     );
